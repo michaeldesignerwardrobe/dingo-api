@@ -3,10 +3,10 @@
 namespace Dingo\Api\Auth\Provider;
 
 use Exception;
-use PHPOpenSourceSaver\JWTAuth\JWTAuth;
+use Tymon\JWTAuth\JWTAuth;
 use Dingo\Api\Routing\Route;
 use Illuminate\Http\Request;
-use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
+use Tymon\JWTAuth\Exceptions\JWTException;
 use Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException;
 
 class JWT extends Authorization
@@ -14,14 +14,14 @@ class JWT extends Authorization
     /**
      * The JWTAuth instance.
      *
-     * @var \PHPOpenSourceSaver\JWTAuth\JWTAuth
+     * @var \Tymon\JWTAuth\JWTAuth
      */
     protected $auth;
 
     /**
      * Create a new JWT provider instance.
      *
-     * @param \PHPOpenSourceSaver\JWTAuth\JWTAuth $auth
+     * @param \Tymon\JWTAuth\JWTAuth $auth
      * @return void
      */
     public function __construct(JWTAuth $auth)
